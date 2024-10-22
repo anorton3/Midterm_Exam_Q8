@@ -3018,9 +3018,9 @@ async function initMap() {
       mapId: "YOUR_MAP_ID",
     });
 
-      const marker = new AdvancedMarkerElement({
-        map,
-        position:{lat:39.428218,lon:-80.186209},
+    var marker = new AdvancedMarkerElement({
+        data: getPoints2(),
+        map: map,
       });
 
   heatmap = new google.maps.visualization.HeatmapLayer({
