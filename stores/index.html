@@ -5955,7 +5955,11 @@ async function initMap() {
       mapTypeId: 'hybrid',
     });
 
-    const infoWindow = new InfoWindow();
+    const infoWindow1 = new google.maps.InfoWindow({
+      content: "<div>img src = 'https://e7.pngegg.com/pngimages/51/949/png-clipart-trader-joe-s-grocery-store-sausage-roll-frozen-food-trader.png'</div>"
+    });
+    const infoWindow2 = new InfoWindow();
+
 
     joe.forEach(({position, title}, i) => {
         const pin = new PinElement({
@@ -5975,9 +5979,9 @@ async function initMap() {
         });
         marker.addListener('click', ({ domEvent, latLng }) => {
             const { target } = domEvent;
-            infoWindow.close();
-            infoWindow.setContent(marker.title);
-            infoWindow.open(marker.map, marker);
+            infoWindow1.close();
+            infoWindow1.setContent(marker.title);
+            infoWindow1.open(marker.map, marker);
         });
     });
 
@@ -6000,9 +6004,9 @@ async function initMap() {
         });
         marker.addListener('click', ({ domEvent, latLng }) => {
             const { target } = domEvent;
-            infoWindow.close();
-            infoWindow.setContent(marker.title);
-            infoWindow.open(marker.map, marker);
+            infoWindow2.close();
+            infoWindow2.setContent(marker.title);
+            infoWindow2.open(marker.map, marker);
         });
     });
 
