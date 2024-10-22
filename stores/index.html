@@ -3017,16 +3017,20 @@ async function initMap() {
       center: myLatlng,
       mapId: "YOUR_MAP_ID",
     });
+      marker1 = new google.maps.visualization.AdvancedMarkerElement({
+          data: getPoints1(),
+          map: map,
+        });
 
-    var marker = new AdvancedMarkerElement({
-        data: getPoints2(),
-        map: map,
-      });
-
-  heatmap = new google.maps.visualization.HeatmapLayer({
+      marker2 = new google.maps.visualization.AdvancedMarkerElement({
+          data: getPoints2(),
+          map: map,
+        });
+    
+      heatmap = new google.maps.visualization.HeatmapLayer({
     data: getPoints(),
     map: map,
-  });
+    });
 
     var heatmap2 = new google.maps.visualization.HeatmapLayer({
     data: getPoints2(),
@@ -3047,8 +3051,10 @@ async function initMap() {
     "rgba(255, 0, 0, 1)",
   ]
   });
+
   document.getElementById("toggle-heatmap").addEventListener("click", toggleHeatmap);
   document.getElementById("toggle-heatmap2").addEventListener("click", toggleHeatmap2);
+
   
 
 function toggleHeatmap() {
