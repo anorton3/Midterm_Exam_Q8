@@ -5955,16 +5955,8 @@ async function initMap() {
       mapTypeId: 'hybrid',
     });
 
-    const infoWindow1 = new InfoWindow({
-      content: "<div>img src = 'https://e7.pngegg.com/pngimages/51/949/png-clipart-trader-joe-s-grocery-store-sausage-roll-frozen-food-trader.png'</div>"
-    });
-
-    const infoWindow2 = new InfoWindow({
-
-      content: "<div>img src = 'https://corporate.aldi.us/fileadmin/fm-dam/logos/ALDI_2017.png'</div>"
-
-    });
-
+    const infoWindow = new InfoWindow();
+    const imagetj = "https://www.theburn.com/wp-content/uploads/2017/11/trader-joes-logo.png"
 
     joe.forEach(({position, title}, i) => {
         const pin = new PinElement({
@@ -5972,7 +5964,8 @@ async function initMap() {
             glyphColor: 'black',
             scale: 0.25,
             background: 'red',
-            borderColor: 'white'
+            borderColor: 'white',
+            icon: imagetj
         });
         const marker = new AdvancedMarkerElement({
             position,
@@ -5984,9 +5977,9 @@ async function initMap() {
         });
         marker.addListener('click', ({ domEvent, latLng }) => {
             const { target } = domEvent;
-            infoWindow1.close();
-            infoWindow1.setContent(marker.title);
-            infoWindow1.open(marker.map, marker);
+            infoWindow.close();
+            infoWindow.setContent(marker.title);
+            infoWindow.open(marker.map, marker);
         });
     });
 
@@ -6009,9 +6002,9 @@ async function initMap() {
         });
         marker.addListener('click', ({ domEvent, latLng }) => {
             const { target } = domEvent;
-            infoWindow2.close();
-            infoWindow2.setContent(marker.title);
-            infoWindow2.open(marker.map, marker);
+            infoWindow.close();
+            infoWindow.setContent(marker.title);
+            infoWindow.open(marker.map, marker);
         });
     });
 
