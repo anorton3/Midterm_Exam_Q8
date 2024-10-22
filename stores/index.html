@@ -32,7 +32,7 @@ body {
   padding-left: 10px;
 }
 
-#floating-panel {
+#floating-panel1 {
   background-color: rgb(203, 73, 44);
   border: 1px solid white;
   left: 30%;
@@ -41,7 +41,7 @@ body {
   top: 10px;
   z-index: 5;
 }
-#floating-panel {
+#floating-panel2 {
   background-color: navy;
   border: 1px solid yellow;
   left: 30%;
@@ -52,12 +52,14 @@ body {
 
 }
       </style>
-    <div id="floating-panel">
+    <div id="floating-panel1">
       <button id="toggle-heatmap">Trader Joe's Location, USA</button>
-      <button id="toggle-heatmap2">Aldi's Location, USA</button>
-
-    
     </div>
+
+    <div id="floating-panel2">
+      <button id="toggle-heatmap2">Aldi's Location, USA</button>
+    </div>
+
     <div id="map"></div>
     <script>
 let map, heatmap;
