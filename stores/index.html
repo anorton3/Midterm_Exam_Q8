@@ -5944,6 +5944,7 @@ async function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 4,
       center: myLatlng,
+      tilt: 45,  
       mapTypeControl: true,
         mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
@@ -5954,7 +5955,7 @@ async function initMap() {
         position: google.maps.ControlPosition.RIGHT_CENTER,
       },
       mapId: "YOUR_MAP_ID",
-      mapTypeIds: ["hybrid", "roadmap", "terrain", "satellite"]
+      mapTypeIds: 'hybrid'
     });
 
     const infoWindow = new InfoWindow();
