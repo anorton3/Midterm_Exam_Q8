@@ -3021,7 +3021,12 @@ async function initMap() {
     marker1 = new google.maps.visualization.AdvancedMarkerElement({
       data: getPoints(),
       map:map,
-    })
+    });
+
+    marker2 = new google.maps.visualization.AdvancedMarkerElement({
+      data: getPoints2(),
+      map:map,
+    });
     
     heatmap = new google.maps.visualization.HeatmapLayer({
     data: getPoints(),
