@@ -5956,8 +5956,7 @@ async function initMap() {
     });
 
     const infoWindow = new InfoWindow();
-    const imagetj = "https://www.theburn.com/wp-content/uploads/2017/11/trader-joes-logo.png"
-
+    
     joe.forEach(({position, title}, i) => {
         const pin = new PinElement({
             glyph: `TJ's`,
@@ -5965,7 +5964,7 @@ async function initMap() {
             scale: 0.25,
             background: 'red',
             borderColor: 'white',
-            icon: imagetj
+            zoom: 14
         });
         const marker = new AdvancedMarkerElement({
             position,
@@ -5990,7 +5989,7 @@ async function initMap() {
             glyphColor: 'black',
             scale: 0.25,
             background: 'blue',
-            borderColor: 'yellow'
+            borderColor: 'yellow',
         });
         const marker = new AdvancedMarkerElement({
             position,
