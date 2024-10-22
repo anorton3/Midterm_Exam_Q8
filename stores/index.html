@@ -3017,11 +3017,11 @@ async function initMap() {
       center: myLatlng,
       mapId: "YOUR_MAP_ID",
     });
-    
-    pop = new google.maps.Marker({
-      data: getPoints(),
-      map: map,
-    });
+
+      const marker = new AdvancedMarkerElement({
+        map,
+        position:{lat:39.428218,lon:-80.186209},
+      });
 
   heatmap = new google.maps.visualization.HeatmapLayer({
     data: getPoints(),
