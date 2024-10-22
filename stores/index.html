@@ -3011,16 +3011,11 @@ async function initMap() {
     
     const myLatlng = { lat: 41.3114, lng: -105.5911  };
 
-
+  
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 4,
       center: myLatlng,
       mapId: "YOUR_MAP_ID",
-    });
-
-    pop = new google.maps.Marker({
-      data: getPoints(),
-      map: map,
     });
 
   heatmap = new google.maps.visualization.HeatmapLayer({
@@ -3075,6 +3070,38 @@ function getPoints2() {
 }
 
 }
+
+
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const map = new Map(document.getElementById("map"), {
+    center: {lat: 41.3114, lng: -105.5911 },
+    zoom: 4,
+    mapId: "YOUR_MAP_ID",
+  });
+  const marker = new AdvancedMarkerElement({
+    map,
+    position: { lat: 37.4239163, lng: -122.0947209 },
+  });
+
+  pop = new google.maps.Marker({
+      data: getPoints(),
+      map: map,
+    });
+
+
+    function getPoints() {
+    var points = []
+    for(var i=0; i<objs.length; i++){
+        points.push(new google.maps.LatLng(objs[i].lat, objs[i].lon))
+    }
+  return points
+}
+}
+
+initMap();
+
 
     </script>
   <script async
