@@ -5949,12 +5949,15 @@ async function initMap() {
         style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
       zoomControl: true,
       scaleControl: true,
+      scaleControlOptions: {
+        position: google.maps.ControlPosition.BOTTOM_CENTER,
+      },
       streetViewControl: true,
       streetViewControlOptions: {
         position: google.maps.ControlPosition.RIGHT_CENTER,
       },
       mapId: "YOUR_MAP_ID",
-      mapTypeIds: 'hybrid',
+      mapTypeIds: 'satellite',
         });
   
     const infoWindow = new InfoWindow();
