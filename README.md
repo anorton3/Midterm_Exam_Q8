@@ -1,4 +1,4 @@
-# Midterm_Exam_Q8
+# Midterm_Exam_Q8 --- Amanda Norton
 Using your choice of a geospatial API, create a web map that visualizes at least two datasets of your choice and includes an analysis component
 -
 -
