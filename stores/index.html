@@ -5959,6 +5959,18 @@ async function initMap() {
       mapId: "YOUR_MAP_ID",
       mapTypeId: 'satellite',
         });
+
+  const trafficLayer = new google.maps.TrafficLayer();
+
+      trafficLayer.setMap(map);
+
+    const transitLayer = new google.maps.TransitLayer();
+
+      transitLayer.setMap(map);
+
+    const bikeLayer = new google.maps.BicyclingLayer();
+
+      bikeLayer.setMap(map);
   
     const infoWindow = new InfoWindow();
     
