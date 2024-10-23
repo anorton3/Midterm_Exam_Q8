@@ -5935,9 +5935,6 @@ const aldi = [
 
 ]
 
-var nojo = [
-{lat:43.0760, lng:-107.2903},
-]
 
 async function initMap() {
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
@@ -5959,16 +5956,7 @@ async function initMap() {
       mapId: "YOUR_MAP_ID",
       mapTypeIds: 'hybrid',
         });
-    
-        const nojo = new google.maps.Polygon({
-        paths: nojo,
-        strokeColor: "#FF0000",
-        strokeWeight: 2,
-        fillColor: "#FF0000",
-        fillOpacity: 0.35,
-      });
-
-
+  
     const infoWindow = new InfoWindow();
     
     joe.forEach(({position, title}, i) => {
