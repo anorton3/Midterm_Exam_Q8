@@ -21,6 +21,7 @@ Trader Joe's Locations and Aldi Locations---Amanda's Favorite Grocery Stores----
 Answers to the above questions:
 1. The two data sets that I chose for this map came from POI factory and describes the locations of two popular grocery stores, Aldi and Trader Joe's. Each dataset contains the coordinates (latitiude and longitude) for the stores location, as well as the name (Aldi or Trader Joe's), the city, the state, and the zip code. Specifically for Trader Joe's, the data set also contains the phone number for the store. Aldi is commmonly used by consumers looking for discounts on food items. Trader Joe's is a unique grocery store that sells only their brand, has high qulaity products, and is also budget-friendly. These stores have become quite popular recently due to their budget-friendly prices and availability when applicable. 
 2. JSON examples used to create the map:
+-
    For the markers: {position:{lat:33.249024,lng:-86.808446},title:"ALDI-Alabaster,AL---113 Simmsville Rd, Alabaster,AL 35007-4100"},
 -
    For the heatmap: {name:"Trader Joes - 205 Summit Blvd, Birmingham",lat:33.447226,lon:-86.731256},
