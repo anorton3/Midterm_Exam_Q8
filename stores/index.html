@@ -5935,6 +5935,10 @@ const aldi = [
 
 ]
 
+var nojo = [
+{lat:43.0760, lng:-107.2903},
+]
+
 async function initMap() {
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
@@ -5953,9 +5957,19 @@ async function initMap() {
         position: google.maps.ControlPosition.RIGHT_CENTER,
       },
       mapId: "YOUR_MAP_ID",
-      mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain"],
+      mapTypeIds: 'hybrid',
         });
     
+    const nojo = new google.maps.Polygon({
+    paths: nojo,
+    strokeColor: "#FF0000",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#FF0000",
+    fillOpacity: 0.35,
+  });
+
+  bermudaTriangle.setMap(map)
 
     const infoWindow = new InfoWindow();
     
